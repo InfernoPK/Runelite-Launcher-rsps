@@ -61,8 +61,8 @@ jobs:
       with:
         name: windows
         path: |
-          ElvargSetup64.exe
-          ElvargSetup32.exe
+          InfernoSetup64.exe
+          InfernoSetup32.exe
         if-no-files-found: error
   linux:
     runs-on: ubuntu-20.04
@@ -94,14 +94,14 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: jar
-        path: target/Elvarg.jar
+        path: target/Inferno.jar
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: linux
         path: |
-          native-linux-x86_64/Elvarg.AppImage
-          native-linux-aarch64/Elvarg-aarch64.AppImage
+          native-linux-x86_64/Inferno.AppImage
+          native-linux-aarch64/Inferno-aarch64.AppImage
         if-no-files-found: error
   macos:
     runs-on: macos-11
@@ -142,6 +142,6 @@ jobs:
       with:
         name: macos
         path: |
-          native-osx/Elvarg-x64.dmg
-          native-osx-aarch64/Elvarg-aarch64.dmg
+          native-osx/Inferno-x64.dmg
+          native-osx-aarch64/Inferno-aarch64.dmg
         if-no-files-found: error

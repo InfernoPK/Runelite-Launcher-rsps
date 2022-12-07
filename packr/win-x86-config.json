@@ -1,9 +1,9 @@
 {
   "platform": "windows32",
   "jdk": "win32-jdk",
-  "executable": "Elvarg",
+  "executable": "Inferno",
   "classpath": [
-    "target/Elvarg.jar"
+    "target/Inferno.jar"
   ],
   "mainclass": "net.runelite.launcher.Launcher",
   "vmargs": [

@@ -35,20 +35,20 @@ echo "f200fb7088dbb5e61e0835fe7b0d7fc1310beda192dacd764927567dcd7c4f0f  packr_${
 # Note: Host umask may have checked out this directory with g/o permissions blank
 chmod -R u=rwX,go=rX appimage
 # ...ditto for the build process
-chmod 644 target/Elvarg.jar
+chmod 644 target/Inferno.jar
 
 java -jar packr_${PACKR_VERSION}.jar \
     packr/linux-x64-config.json
 
-pushd native-linux-x86_64/Elvarg.AppDir
+pushd native-linux-x86_64/Inferno.AppDir
 mkdir -p jre/lib/amd64/server/
 ln -s ../../server/libjvm.so jre/lib/amd64/server/ # packr looks for libjvm at this hardcoded path
 
 # Symlink AppRun -> RuneLite
-ln -s Elvarg AppRun
+ln -s Inferno AppRun
 
 # Ensure RuneLite is executable to all users
-chmod 755 Elvarg
+chmod 755 Inferno
 popd
 
 if ! [ -f appimagetool-x86_64.AppImage ] ; then
@@ -60,5 +60,5 @@ fi
 echo "df3baf5ca5facbecfc2f3fa6713c29ab9cefa8fd8c1eac5d283b79cab33e4acb  appimagetool-x86_64.AppImage" | sha256sum -c
 
 ./appimagetool-x86_64.AppImage \
-	native-linux-x86_64/Elvarg.AppDir/ \
-	native-linux-x86_64/Elvarg.AppImage
+	native-linux-x86_64/Inferno.AppDir/ \
+	native-linux-x86_64/Inferno.AppImage

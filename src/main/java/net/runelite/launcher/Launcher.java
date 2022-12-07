@@ -121,12 +121,12 @@ import org.slf4j.LoggerFactory;
 @Slf4j
 public class Launcher
 {
-	private static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".elvarg");
+	private static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".inferno");
 	public static final File LOGS_DIR = new File(RUNELITE_DIR, "logs");
 
 	public static final File CRASH_FILES = new File(LOGS_DIR, "jvm_crash_pid_%p.log");
 	private static final String USER_AGENT = "RuneLite/" + LauncherProperties.getVersion();
-	private static final String LAUNCHER_EXECUTABLE_NAME = "Elvarg.exe";
+	private static final String LAUNCHER_EXECUTABLE_NAME = "Inferno.exe";
 	private static final String LAUNCHER_SETTINGS = "settings.json";
 
 	static HashMap<String, ClientType> clientTypes = new HashMap<>();
@@ -571,6 +571,8 @@ public class Launcher
 	{
 		URL u = new URL(clientTypes.get(type).getBootstrap());
 		URL signatureUrl = new URL(clientTypes.get(type).getBootstrapsig());
+
+		System.out.println(clientTypes.get(type).getBootstrap());
 
 		URLConnection conn = u.openConnection();
 		URLConnection signatureConn = signatureUrl.openConnection();

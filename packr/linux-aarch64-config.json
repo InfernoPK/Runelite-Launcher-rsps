@@ -1,9 +1,9 @@
 {
     "platform": "linuxaarch64",
     "jdk": "linux-aarch64-jdk",
-    "executable": "Elvarg",
+    "executable": "Inferno",
     "classpath": [
-        "target/Elvarg.jar"
+        "target/Inferno.jar"
     ],
     "mainclass": "net.runelite.launcher.Launcher",
     "vmargs": [
@@ -12,7 +12,7 @@
        "-Xss2m",
        "-XX:CompileThreshold=1500"
     ],
-    "output": "native-linux-aarch64/Elvarg.AppDir/",
+    "output": "native-linux-aarch64/Inferno.AppDir/",
     "resources": [
       "target/filtered-resources/app.desktop",
       "appimage/app.png"

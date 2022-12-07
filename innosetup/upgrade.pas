@@ -14,7 +14,7 @@ begin
 
     rlUpgrade := GetEnv('ELVARG_UPGRADE');
     if rlUpgrade <> '' then begin
-      exePath := ExpandConstant('{app}\Elvarg.exe');
+      exePath := ExpandConstant('{app}\Inferno.exe');
       Exec(exePath, GetEnv('ELVARG_UPGRADE_PARAMS'), '', SW_SHOW, ewNoWait, ResultCode);
     end;
   end;
